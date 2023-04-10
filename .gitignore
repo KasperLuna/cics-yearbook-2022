@@ -1,0 +1,6 @@
+.env
+.DS_Store
+certificate.pem
+certrequest.csr
+privatekey.pem
+node_modules/

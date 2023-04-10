@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xml:lang>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <!-- By KasperL You're Welcome! -->
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to the <%= title %> yearbook!</p>
+  <% students.forEach(student=> { const studNum = student.val0.replace(/-/g,
+    ""); const noComma = student.val1.replaceAll(/,/g, "").toUpperCase(); const
+    studName = noComma.replaceAll(/\s+/g, "-"); %>
+    <div class="student"">
+      <img
+        src=" <%=baseURL%>/<%=course%>/<%=studName%>-<%=studNum%>.jpg"
+            alt="No Image for <%= studName %>"
+              />
+              <h3>
+                <%= studName %>
+              </h3>
+    </div>
+
+    <% }) %>
+</body>
+
+</html>
